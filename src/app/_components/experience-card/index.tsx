@@ -33,7 +33,7 @@ export default function ExperienceCard({ character }: ExperienceCardProps) {
   }, [targetPercentage]);
 
   return (
-    <div className="w-full bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-5 flex flex-col backdrop-blur-sm">
+    <div className="w-full bg-(--bg-secondary) border border-zinc-800/60 rounded-2xl p-5 flex flex-col backdrop-blur-sm">
       <div className="flex items-center gap-5">
         <div className="relative w-16 h-16 flex items-center justify-center drop-shadow-[0_0_10px_rgba(147,51,234,0.3)]">
           <Image

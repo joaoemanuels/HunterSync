@@ -1,3 +1,9 @@
+import { HabitsSection } from "./_components/habits-section";
+
 export default function Habits() {
-  return <h1>Habits</h1>;
+  return (
+    <div className="w-full min-h-screen bg-black text-white py-8">
+      <HabitsSection />
+    </div>
+  );
 }

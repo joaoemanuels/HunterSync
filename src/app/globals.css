@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #050712;
+  --foreground: #060812;
 }
 
 @theme inline {
@@ -11,11 +11,44 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+/* index.css */
+/* index.css */
+@layer utilities {
+  .bg-linear-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #050712;
-    --foreground: #ededed;
+    --background: #060812;
+    --bg-secondary: #0a0d18;
+    --bg-tertiary: #101422;
+    --color-bg-surface: #111120;
+    --color-bg-elevated: #191930;
+    --color-bg-overlay: #1e1e3a;
+    --color-accent-primary: #7c3aed;
+    --color-accent-light: #a855f7;
+    --color-accent-dark: #6d28d9;
+    --color-accent-muted: #2e1065;
+    --color-skill-body: #22c55e;
+    --color-skill-study: #3b82f6;
+    --color-skill-reading: #ec4899;
+    --color-skill-finance: #f59e0b;
+    --color-skill-mental: #ef4444;
+    --color-skill-mind: #8b5cf6;
+    --color-skill-career: #06b6d4;
+    --color-skill-social: #f97316;
+    --color-xp-gold: #f59e0b;
+    --color-streak-fire: #f97316;
+    --color-success: #22c55e;
+    --color-text-primary: #f1f0ff;
+    --color-text-secondary: #9b9bc0;
+    --color-text-muted: #5c5c8a;
+    --color-border-default: #2a2a4a;
+    --color-border-strong: #3d3d6b;
   }
 }
 

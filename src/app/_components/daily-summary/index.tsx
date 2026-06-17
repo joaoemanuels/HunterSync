@@ -55,10 +55,13 @@ export default function DailySummary({ character }: DailySummaryProps) {
   ];
 
   return (
-    <div className="w-full grid grid-cols-4 gap-2.5">
-      {stats.map((stat, index) => (
-        <SummaryCard key={index} {...stat} />
-      ))}
+    <div>
+      <h1>RESUMO DO DIA</h1>
+      <div className="w-full grid grid-cols-4 gap-2.5">
+        {stats.map((stat, index) => (
+          <SummaryCard key={index} {...stat} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -72,7 +75,7 @@ function SummaryCard({
 }: SummaryCardProps) {
   return (
     <div
-      className={`group flex flex-col items-center justify-between bg-zinc-900/30 border border-zinc-800/50 rounded-xl p-3 aspect-[3/4] text-center transition-all duration-300 hover:border-zinc-700/80 ${glowColor}`}
+      className={`group flex flex-col items-center justify-between bg-zinc-900/30 border border-zinc-800/50 rounded-xl p-3 aspect-3/4 text-center transition-all duration-300 hover:border-zinc-700/80 ${glowColor}`}
     >
       <div
         className={`flex items-center justify-center p-1.5 rounded-lg ${iconColor} bg-white/5`}

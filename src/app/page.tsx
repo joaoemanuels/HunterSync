@@ -6,7 +6,7 @@ import DailyMissionsList from "./_components/daily-missions-list";
 
 export default async function Home() {
   return (
-    <div className="flex flex-col gap-6 p-4 pb-24 w-full min-h-screen bg-black text-white overflow-hidden">
+    <div className="flex flex-col gap-6 p-4 pb-24 w-full min-h-screen text-white overflow-hidden">
       <ProfileHeader />
 
       <ExperienceCard />

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import rank from "../../../assets/image/rank.png";
 
 interface ExperienceCardProps {
   character?: {
@@ -32,18 +33,20 @@ export default function ExperienceCard({ character }: ExperienceCardProps) {
   }, [targetPercentage]);
 
   return (
-    <div className="w-full bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-5 flex flex-col gap-4 backdrop-blur-sm">
+    <div className="w-full bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-5 flex flex-col backdrop-blur-sm">
       <div className="flex items-center gap-5">
         <div className="relative w-16 h-16 flex items-center justify-center drop-shadow-[0_0_10px_rgba(147,51,234,0.3)]">
-          {/* <Image
-            src={levelBadge}
+          <Image
+            src={rank}
             alt="Emblema de Nível RPG"
+            width={56}
+            height={56}
             className="object-contain w-full h-full"
             priority
-          /> */}
+          />
         </div>
 
-        <div className="flex-1 grid grid-cols-2 gap-y-2">
+        <div className="flex-1 grid gap-y-2">
           <div className="flex flex-col">
             <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">
               Nível
@@ -68,7 +71,7 @@ export default function ExperienceCard({ character }: ExperienceCardProps) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         <div className="flex justify-end w-full">
           <span className="text-xs font-bold text-zinc-500 font-mono">
             {Math.round(targetPercentage)}%

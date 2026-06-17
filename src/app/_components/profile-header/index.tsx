@@ -17,7 +17,7 @@ export default function ProfileHeader({ character }: ProfileHeaderProps) {
   const coinTokens = character?.coin_tokens?.toLocaleString("pt-BR") || "8.450";
 
   return (
-    <section className="flex w-full items-center justify-between p-3 bg-black text-white">
+    <section className="flex w-full items-center justify-between p-3 text-white">
       <div className="flex items-center gap-3">
         <div className="relative w-14 h-14 rounded-full p-0.5 bg-linear-to-tr from-purple-600 to-indigo-400 flex items-center justify-center">
           <div className="w-full h-full rounded-full overflow-hidden bg-zinc-950 relative">
@@ -37,7 +37,7 @@ export default function ProfileHeader({ character }: ProfileHeaderProps) {
         </div>
 
         <div className="flex flex-col">
-          <h1 className="text-lg font-bold tracking-tight text-zinc-100">
+          <h1 className="text-sm font-bold tracking-tight text-zinc-100">
             Bom dia, {username}!
           </h1>
           <p className="text-xs text-zinc-500 font-medium">
@@ -46,7 +46,7 @@ export default function ProfileHeader({ character }: ProfileHeaderProps) {
         </div>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1">
         <div className="flex flex-col justify-center bg-zinc-900/50 border border-zinc-800/80 rounded-xl px-3 py-1.5 min-w-22.5 h-12">
           <div className="flex items-center justify-between gap-2 h-5">
             <Flame className="w-3.5 h-3.5 text-orange-500 fill-orange-500" />
@@ -57,7 +57,7 @@ export default function ProfileHeader({ character }: ProfileHeaderProps) {
 
           <div className="h-px bg-zinc-800/60 my-0.5 w-full" />
 
-          <div className="flex items-center justify-between gap-2 h-5">
+          <div className="flex items-center justify-between h-5">
             <Coins className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
             <span className="text-xs font-bold font-mono tracking-wide text-zinc-300">
               {coinTokens}

@@ -107,16 +107,16 @@ function MissionItem({ mission, onToggle }: MissionItemProps) {
       onClick={() => onToggle(mission.id)}
       className={`w-full flex items-center justify-between p-4 rounded-xl border cursor-pointer select-none transition-all duration-300 ${
         mission.is_completed
-          ? "bg-emerald-950/20 border-emerald-500/50 shadow-[inset_0_0_12px_rgba(16,185,129,0.05)]"
-          : "bg-zinc-900/30 border-zinc-800/50 hover:border-zinc-700/80"
+          ? "bg-emerald-950/20 border-(--color-skill-body) shadow-[inset_0_0_12px_rgba(16,185,129,0.05)]"
+          : "bg-zinc-900/30 border-(--color-border) hover:border-(--color-text-secondary)"
       }`}
     >
       <div className="flex items-center gap-4">
         <div
           className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-200 ${
             mission.is_completed
-              ? "bg-emerald-500 border-emerald-500 text-black"
-              : "border-zinc-600 bg-transparent"
+              ? "bg-(--color-skill-body) border-(--color-success) text-black"
+              : "border-(--color-text-secondary) bg-transparent"
           }`}
         >
           {mission.is_completed && <Check className="w-3.5 h-3.5 stroke-4" />}
@@ -126,8 +126,8 @@ function MissionItem({ mission, onToggle }: MissionItemProps) {
           <span
             className={`text-sm font-bold transition-all duration-200 tracking-wide ${
               mission.is_completed
-                ? "text-zinc-400 line-through decoration-zinc-600"
-                : "text-zinc-100"
+                ? "text-(--color-text-secondary) line-through decoration-(--color-text-secondary)"
+                : "text-(--color-text-primary)"
             }`}
           >
             {mission.title}
@@ -139,15 +139,15 @@ function MissionItem({ mission, onToggle }: MissionItemProps) {
       </div>
 
       <div className="flex items-center gap-3">
-        <span className="text-xs font-bold text-zinc-400 font-mono tracking-wide">
+        <span className="text-xs font-bold text-(--color-text-secondary) font-mono tracking-wide">
           +{mission.xp_reward} XP
         </span>
 
         <div
           className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
             mission.is_completed
-              ? "bg-emerald-500 text-black opacity-100 scale-100"
-              : "border border-zinc-700 text-transparent opacity-40 scale-95"
+              ? "bg-(--color-skill-body) text-black opacity-100 scale-100"
+              : "border border-(--color-text-secondary) text-transparent opacity-40 scale-95"
           }`}
         >
           <Check className="w-3.5 h-3.5 stroke-3" />

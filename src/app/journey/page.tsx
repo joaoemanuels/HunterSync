@@ -1,3 +1,9 @@
+import { JourneySection } from "./_components/journey-section";
+
 export default function Journey() {
-  return <h1>Journey</h1>;
+  return (
+    <div className="w-full min-h-screen bg-black text-white">
+      <JourneySection />
+    </div>
+  );
 }

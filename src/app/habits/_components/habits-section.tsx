@@ -4,11 +4,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { HabitCard, HabitProps } from "./habit-card";
 
-interface HabitWithCategory extends HabitProps {
-  category: string;
-}
-
-const HABITS_MOCK: HabitWithCategory[] = [
+const HABITS_MOCK: HabitProps[] = [
   {
     id: "1",
     title: "Treino",

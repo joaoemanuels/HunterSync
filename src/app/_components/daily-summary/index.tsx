@@ -34,15 +34,19 @@ export default function DailySummary({ character }: DailySummaryProps) {
     {
       value: xpGained,
       label: "XP ganhos",
-      icon: <Star className="w-5 h-5 fill-amber-500 text-amber-500" />,
-      iconColor: "text-amber-500",
+      icon: (
+        <Star className="w-5 h-5 fill-(--color-skill-finance) text-(--color-skill-finance)" />
+      ),
+      iconColor: "text-(--color-skill-finance)",
       glowColor: "group-hover:shadow-[0_0_15px_rgba(245,158,11,0.15)]",
     },
     {
       value: streakDays,
       label: "Sequência de dias",
-      icon: <Flame className="w-5 h-5 fill-orange-500 text-orange-500" />,
-      iconColor: "text-orange-500",
+      icon: (
+        <Flame className="w-5 h-5 fill-(--color-xp-gold) text-(--color-xp-gold)" />
+      ),
+      iconColor: "text-(--color-xp-gold)",
       glowColor: "group-hover:shadow-[0_0_15px_rgba(249,115,22,0.15)]",
     },
     {
@@ -75,7 +79,7 @@ function SummaryCard({
 }: SummaryCardProps) {
   return (
     <div
-      className={`group flex flex-col items-center justify-between bg-(--bg-tertiary) border border-zinc-800/50 rounded-xl p-3 aspect-3/4 text-center transition-all duration-300 hover:border-zinc-700/80 ${glowColor}`}
+      className={`group flex flex-col items-center justify-between bg-(--bg-tertiary) border border-(--color-border) rounded-xl p-3 aspect-3/4 text-center transition-all duration-300 hover:border-(--color-bg-elevated) ${glowColor}`}
     >
       <div
         className={`flex items-center justify-center p-1.5 rounded-lg ${iconColor} bg-white/5`}
@@ -88,7 +92,7 @@ function SummaryCard({
           {value}
         </span>
 
-        <span className="text-[10px] font-medium leading-tight text-zinc-500 tracking-wide px-0.5">
+        <span className="text-[10px] font-medium leading-tight text-(--color-text-muted) tracking-wide px-0.5">
           {label}
         </span>
       </div>

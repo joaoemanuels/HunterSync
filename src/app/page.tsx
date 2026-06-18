@@ -1,13 +1,13 @@
-import Link from "next/link";
 import ExperienceCard from "./_components/experience-card";
 import DailySummary from "./_components/daily-summary";
 import DailyMissionsList from "./_components/daily-missions-list";
 import SystemStatus from "./_components/system-status";
+import ProfileHeader from "@/components/layout/profile-header";
 
 export default async function Home() {
   return (
-    <div className="flex bg-system-grid flex-col gap-6 p-4 pb-24 w-full min-h-screen overflow-hidden">
-      
+    <div className="flex bg-system-grid flex-col gap-6 p-4 w-full min-h-screen overflow-hidden">
+      <ProfileHeader />
 
       <ExperienceCard />
 

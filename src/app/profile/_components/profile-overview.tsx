@@ -23,7 +23,7 @@ export default function ProfileOverview({ character }: ProfileOverviewProps) {
     <section className="w-full flex flex-col items-center pt-2 pb-4 relative text-white">
       <div className="w-full flex justify-end px-3">
         <Link
-          href="/profile/settings"
+          href="/settings"
           className="text-zinc-400 hover:text-zinc-200 transition-colors p-1"
         >
           <Settings className="w-6 h-6 stroke-[1.75]" />

@@ -89,9 +89,7 @@ export default function DailyMissionsList({
         ))}
       </div>
 
-      <button className="w-full mt-2 bg-linear-to-r from-purple-700 to-indigo-600 hover:from-purple-600 hover:to-indigo-500 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-[0_4px_12px_rgba(147,51,234,0.3)] hover:shadow-[0_4px_16px_rgba(147,51,234,0.45)] active:scale-[0.99] transition-all duration-200 uppercase tracking-wide">
-        Ver todas as missões
-      </button>
+      
     </div>
   );
 }

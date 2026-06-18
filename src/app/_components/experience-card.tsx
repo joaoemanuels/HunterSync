@@ -71,12 +71,7 @@ export default function ExperienceCard({ character }: ExperienceCardProps) {
         </div>
       </div>
 
-      <div className="flex flex-col w-full">
-        <div className="flex justify-end w-full">
-          <span className="text-xs font-bold text-(--color-text-secondary) font-mono">
-            {Math.round(targetPercentage)}%
-          </span>
-        </div>
+      <div className="flex flex-col w-full mt-5">
 
         <div className="w-full bg-background rounded-full h-2.5 p-0.5 border border-(--color-border)">
           <div

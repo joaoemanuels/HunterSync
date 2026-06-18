@@ -4,7 +4,7 @@ export default function Achievement() {
   console.log(achievementBg);
   return (
     <div
-      className="flex flex-col gap-2 p-6 rounded-2xl border-2 border-zinc-900"
+      className="flex flex-col gap-2 p-6 my-6 rounded-2xl border-2 border-zinc-900"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.6) 50%, rgba(9, 9, 11, 0) 100%), url(${achievementBg.src})`,
         backgroundSize: "cover",

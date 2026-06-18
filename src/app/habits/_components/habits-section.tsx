@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { HabitCard, HabitProps } from "./habit-card";
 import Achievement from "./achievement";
+import HabitsModal from "./habits-modal";
 
 const HABITS_MOCK: HabitProps[] = [
   {
@@ -62,6 +63,7 @@ const FILTERS = ["Todos", "Diários", "Semanais", "Mensais"];
 
 export function HabitsSection() {
   const [activeFilter, setActiveFilter] = useState("Diários");
+  const [isNewMissionOpen, setIsNewMissionOpen] = useState(false);
 
   const filteredHabits = HABITS_MOCK.filter((habit) => {
     if (activeFilter === "Todos") return true;
@@ -74,7 +76,10 @@ export function HabitsSection() {
         <h2 className="text-2xl font-bold text-white tracking-tight">
           Hábitos
         </h2>
-        <button className="w-10 h-10 rounded-full bg-violet-600 hover:bg-violet-500 text-white flex items-center justify-center shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-colors">
+        <button
+          onClick={() => setIsNewMissionOpen(true)}
+          className="w-10 h-10 rounded-full bg-violet-600 hover:bg-violet-500 text-white flex items-center justify-center shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-colors"
+        >
           <Plus className="w-5 h-5" />
         </button>
       </div>
@@ -112,6 +117,11 @@ export function HabitsSection() {
           </p>
         )}
       </div>
+
+      <HabitsModal
+        isOpen={isNewMissionOpen}
+        onClose={() => setIsNewMissionOpen(false)}
+      />
     </div>
   );
 }

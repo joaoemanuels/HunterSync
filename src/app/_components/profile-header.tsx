@@ -17,7 +17,7 @@ export default function ProfileHeader({ character }: ProfileHeaderProps) {
   const coinTokens = character?.coin_tokens?.toLocaleString("pt-BR") || "8.450";
 
   return (
-    <section className="flex w-full items-center justify-between p-3 text-(--color-text-primary)">
+    <section className="flex w-full fixed z-999 bg-zinc-900 items-center justify-between p-3 text-(--color-text-primary)">
       <div className="flex items-center gap-3">
         <div className="relative w-14 h-14 rounded-full p-0.5 bg-linear-to-tr from-purple-600 to-indigo-400 flex items-center justify-center">
           <div className="w-full h-full rounded-full overflow-hidden bg-zinc-950 relative">

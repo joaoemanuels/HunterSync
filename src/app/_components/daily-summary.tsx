@@ -60,7 +60,7 @@ export default function DailySummary({ character }: DailySummaryProps) {
 
   return (
     <div>
-      <h1>RESUMO DO DIA</h1>
+      <h1 className="text-white">RESUMO DO DIA</h1>
       <div className="w-full grid grid-cols-4 gap-2.5">
         {stats.map((stat, index) => (
           <SummaryCard key={index} {...stat} />

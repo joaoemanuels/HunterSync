@@ -71,7 +71,7 @@ export function HabitCard({
     >
       <div className="flex items-center gap-4">
         <div
-          className={`w-14 h-14 rounded-full border flex items-center justify-center ${styles.iconBg}`}
+          className={`w-14 h-14 rounded-2xl border flex items-center justify-center ${styles.iconBg}`}
         >
           <Icon className="w-6 h-6" />
         </div>

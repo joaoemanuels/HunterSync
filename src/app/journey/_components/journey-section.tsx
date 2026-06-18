@@ -55,7 +55,10 @@ export function JourneySection() {
         })}
       </div>
 
-      <div className="mt-2">{renderContent()}</div>
+      <div className="mt-2">
+        {renderContent()}
+        
+      </div>
     </div>
   );
 }

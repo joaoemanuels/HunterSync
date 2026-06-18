@@ -27,17 +27,17 @@ export default function GeneralStats({ stats }: GeneralStatsProps) {
         Estatísticas gerais
       </h3>
 
-      <div className="w-full bg-zinc-900/30 border border-zinc-800/50 rounded-xl px-4 flex flex-col divide-y divide-zinc-800/40 text-white">
+      <div className="w-full bg-zinc-900 border border-zinc-600 rounded-xl  flex flex-col divide-y divide-zinc-600 text-white">
         {rows.map((row, index) => (
           <div
             key={index}
             className="w-full flex items-center justify-between py-3.5 select-none transition-colors duration-150 hover:bg-zinc-900/10"
           >
-            <span className="text-sm font-medium text-zinc-400 tracking-wide">
+            <span className="text-sm font-medium text-zinc-400 px-4 tracking-wide">
               {row.label}
             </span>
 
-            <span className="text-sm font-bold text-zinc-100 font-mono tracking-wide">
+            <span className="text-sm font-bold text-zinc-100 px-4 font-mono tracking-wide">
               {row.value}
             </span>
           </div>

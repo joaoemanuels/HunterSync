@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import rank from "../../../assets/image/rank.png";
+import rank from "../../assets/image/rank.png";
 
 interface ExperienceCardProps {
   character?: {

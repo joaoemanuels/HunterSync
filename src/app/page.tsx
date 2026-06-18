@@ -1,13 +1,13 @@
 import Link from "next/link";
-import ProfileHeader from "./_components/profile-header";
 import ExperienceCard from "./_components/experience-card";
 import DailySummary from "./_components/daily-summary";
 import DailyMissionsList from "./_components/daily-missions-list";
+import SystemStatus from "./_components/system-status";
 
 export default async function Home() {
   return (
-    <div className="flex bg-linear-grid flex-col gap-6 p-4 pb-24 w-full min-h-screen overflow-hidden">
-      <ProfileHeader />
+    <div className="flex bg-system-grid flex-col gap-6 p-4 pb-24 w-full min-h-screen overflow-hidden">
+      
 
       <ExperienceCard />
 
@@ -16,6 +16,8 @@ export default async function Home() {
 
         <DailyMissionsList />
       </div>
+
+      <SystemStatus />
     </div>
   );
 }

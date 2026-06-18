@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import { HabitCard, HabitProps } from "./habit-card";
+import Achievement from "./achievement";
 
 const HABITS_MOCK: HabitProps[] = [
   {
@@ -99,7 +100,12 @@ export function HabitsSection() {
 
       <div className="flex flex-col gap-3">
         {filteredHabits.length > 0 ? (
-          filteredHabits.map((habit) => <HabitCard key={habit.id} {...habit} />)
+          <>
+            {filteredHabits.map((habit) => (
+              <HabitCard key={habit.id} {...habit} />
+            ))}
+            <Achievement />
+          </>
         ) : (
           <p className="text-zinc-500 text-sm text-center py-8 border border-dashed border-zinc-800 rounded-2xl">
             Nenhum hábito cadastrado para este período.

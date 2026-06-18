@@ -1,4 +1,4 @@
-import { Code2, Target, Eye } from "lucide-react";
+import { Code2, Target, Dumbbell } from "lucide-react";
 
 interface TopSkillsListProps {
   skills?: {
@@ -17,52 +17,74 @@ export default function TopSkillsList({ skills }: TopSkillsListProps) {
     {
       name: "Programação",
       level: programmingLevel,
-      icon: <Code2 className="w-4 h-4" />,
-      colorClasses:
-        "border-purple-600 text-purple-400 bg-purple-950/20 shadow-[0_0_10px_rgba(147,51,234,0.1)]",
+      icon: <Code2 className="w-5 h-5" />,
+      // Classes de cor específicas para o tema roxo
+      borderColor: "border-l-purple-500",
+      iconTheme: "bg-purple-950/40 text-purple-400",
+      barColor: "bg-purple-500",
+      textColor: "text-purple-400",
+      progress: 65, // Porcentagem da barra
     },
     {
       name: "Foco",
       level: focusLevel,
-      icon: <Eye className="w-4 h-4" />,
-      colorClasses:
-        "border-blue-600 text-blue-400 bg-blue-950/20 shadow-[0_0_10px_rgba(59,130,246,0.1)]",
+      icon: <Target className="w-5 h-5" />, // Ícone de mira/foco
+      borderColor: "border-l-sky-500",
+      iconTheme: "bg-sky-950/40 text-sky-400",
+      barColor: "bg-sky-500",
+      textColor: "text-sky-400",
+      progress: 50,
     },
     {
       name: "Disciplina",
       level: disciplineLevel,
-      icon: <Target className="w-4 h-4" />,
-      colorClasses:
-        "border-amber-600 text-amber-500 bg-amber-950/20 shadow-[0_0_10px_rgba(245,158,11,0.1)]",
+      icon: <Dumbbell className="w-5 h-5" />, // Ícone de peso do print
+      borderColor: "border-l-emerald-500",
+      iconTheme: "bg-emerald-950/40 text-emerald-400",
+      barColor: "bg-emerald-500",
+      textColor: "text-emerald-400",
+      progress: 55,
     },
   ];
 
   return (
     <div className="w-full flex flex-col gap-3">
-      <h3 className="text-sm font-bold text-zinc-300 tracking-wide">
+      <h3 className="text-sm font-bold text-zinc-400 tracking-wide">
         Skills principais
       </h3>
 
-      <div className="w-full grid grid-cols-3 gap-2 text-white">
+      <div className="w-full flex flex-col gap-3">
         {topSkills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 bg-zinc-900/30 border border-zinc-800/50 rounded-xl p-2 min-w-0"
+            className={`flex items-center justify-between bg-zinc-900 border border-zinc-600 border-l-4 ${skill.borderColor} rounded-xl p-4`}
           >
-            <div
-              className={`w-9 h-9 flex items-center justify-center rounded-full border shrink-0 ${skill.colorClasses}`}
-            >
-              {skill.icon}
+            <div className="flex items-center gap-4 flex-1">
+              <div
+                className={`w-11 h-11 flex items-center justify-center rounded-xl ${skill.iconTheme} shrink-0`}
+              >
+                {skill.icon}
+              </div>
+
+              <div className="flex flex-col gap-1.5 w-full max-w-40">
+                <span className="text-sm font-semibold text-zinc-100  tracking-wide leading-none">
+                  {skill.name}
+                </span>
+
+                <div className="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                  <div
+                    className={`h-full rounded-full ${skill.barColor}`}
+                    style={{ width: `${skill.progress}%` }}
+                  />
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-col min-w-0 justify-center">
-              <span className="text-[11px] font-bold text-zinc-100 tracking-wide truncate leading-tight">
-                {skill.name}
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-500 font-mono mt-0.5 leading-none">
-                Nível {skill.level}
-              </span>
-            </div>
+            <span
+              className={`text-xs font-mono font-bold tracking-wide ${skill.textColor}`}
+            >
+              Nível {skill.level}
+            </span>
           </div>
         ))}
       </div>

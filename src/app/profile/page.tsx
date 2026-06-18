@@ -5,7 +5,7 @@ import TopSkillsList from "./_components/top-skills-list";
 
 export default function Profile() {
   return (
-    <section className="p-4 flex flex-col gap-7 pb-20">
+    <section className="p-4 flex bg-hud-scanline flex-col gap-7 pb-20">
       <ProfileOverview />
       <QuickStatsGrid />
       <TopSkillsList />
